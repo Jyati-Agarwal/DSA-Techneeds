@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class A1Q3 {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of input numbers to be tested: ");
+        int t = sc.nextInt();
+
+        for (int i = 0; i < t; i++) {
+            System.out.println("Enter a number: ");
+            int n = sc.nextInt();
+
+            boolean isPrime = true;
+            for (int j = 2; j * j <= n; j++) {
+                if (n % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            
+            if (isPrime) {
+                System.out.println("prime");
+            } else {
+                System.out.println("not prime");
+            }
+        }
+    }
+}
+
